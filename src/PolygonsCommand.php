@@ -12,7 +12,8 @@ class PolygonsCommand extends Command
     {
         $this->setName('sortPolygons')
             ->setDescription('sorting polygons using data from JSON file')            
-            ->addArgument('file_name', InputArgument::REQUIRED);
+            ->setHelp('To manage this console app to work, you must set exact JSON filename as an argument.')
+            ->addArgument('file_path_to_JSON_file', InputArgument::REQUIRED);
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
