@@ -14,7 +14,8 @@ class Command extends SymfonyCommand
 
     protected function sortPolygons(InputInterface $input, OutputInterface $output)
     {
-        $output->write('Hello world!');
+        $content = file_get_contents($input->getArgument('file_name'));
+        $output->write($content);
     }
 }
 ?>
